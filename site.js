@@ -30,6 +30,7 @@ var finallink = str.link(data.results[x].link.url)
 button.onclick = function pick(){
 document.getElementById("title").innerHTML = data.results[x].display_title;
 document.getElementById("rating").innerHTML = data.results[x].mpaa_rating;
+document.getElementById("summary").innerHTML = data.results[x].summary_short;
 document.getElementById("url").innerHTML = finallink;
 };
 
