@@ -13,21 +13,22 @@ $.ajax({
 
 // our script maybe?
 
-// gets a random movie and puts it into a variable x
-var x = Math.floor(Math.random() * data.num_results);
-console.log(x);
-
 // gets the button
 var button = document.getElementById("pickmovie");
 console.log(button);
 
+
+// clicking button returns random movie information
+button.onclick = function pick(){ 
+// gets a random movie and puts it into a variable x
+var x = Math.floor(Math.random() * data.num_results);
+console.log(x);
+
 //to make the url work
 var str = "Read NYT's review";
 var finallink = str.link(data.results[x].link.url)
+console.log(this);
 
-
-// clicking button returns random movie information
-button.onclick = function pick(){
 document.getElementById("title").innerHTML = data.results[x].display_title;
 document.getElementById("rating").innerHTML = data.results[x].mpaa_rating;
 document.getElementById("summary").innerHTML = data.results[x].summary_short;
